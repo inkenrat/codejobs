@@ -1352,7 +1352,7 @@ CREATE TABLE IF NOT EXISTS `muu_re_privileges_users` (
 --
 
 INSERT INTO `muu_re_privileges_users` (`ID_Privilege`, `ID_User`) VALUES
-(1, 1)
+(1, 1);
 
 -- --------------------------------------------------------
 
