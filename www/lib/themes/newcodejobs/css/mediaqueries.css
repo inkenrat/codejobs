@@ -1,0 +1,31 @@
+@media (max-width: 400px), (max-device-width: 400px) {
+	header #topbar-wrapper {
+		width: 700px;
+		height: 40px;
+		background-color: #292929;
+	}
+
+	header #wrapper nav ul {
+		margin: 0px;
+		padding: 0px;
+		position: relative;
+		z-index: 2;
+		margin-left: 2.5%;
+	}
+
+	header #topbar {
+		width: 1020px;
+	}
+
+	header #topbar nav ul li {
+    	font-size: 55%;
+	}
+
+	header #logo {
+		margin-left: 7%;
+	}
+
+	footer p {
+		width: 700px;
+	}
+}

@@ -1,0 +1,389 @@
+/* Variables */
+@bgColor: #FFFFF7;
+@aColor: #CC2A2A;
+@aHoverColor: #0079CE;
+@pColor: #363535;
+@hColor: #292929;
+@blueColor: #045c98;
+@width: 1020px;
+
+/* Functions */
+.h(@color: #292929, @fontsize: 160%, @marginbottom: 10px) {
+	color: @color;
+	font-size: @fontsize;
+	margin-bottom: @marginbottom;
+    letter-spacing: -0.06em;
+}
+
+.getMargin(@_top, @_right, @_bottom, @_left) {
+	margin: @arguments;
+}
+
+.roundedCorners(@radius: 12px) {
+	-moz-border-radius: @radius;
+	-webkit-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.resetMarginAndPadding() {
+	margin: 0px;
+	padding: 0px;
+}
+
+.navUlLiA() {
+	background: none repeat scroll 0 0 @hColor;
+   	.roundedCorners;
+    color: @bgColor;
+    font-family: Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+    padding: 3px 9px;
+    text-decoration: none;
+}
+
+.navUlLi() {
+	display: inline;
+    font-size: 70%;
+    list-style-type: none;
+    margin-bottom: 2px;
+}
+
+.getPorlet(@_width, @_height, @_left) {
+	border: 1px solid #000;
+	width: @_width;
+	height: @_height;
+	position: absolute;
+	top: 32px;
+	left: @_left;
+	z-index: 3;
+	background-color: #FFF;
+    background-color: #FFFFFF;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    margin: 8px 0 0;
+    padding: 5px;
+    font-size: 75%;
+    text-align: center;
+}
+
+.getInput() {
+	width: 250px;
+	border: 1px solid #d1d1d1;
+	color: #CCC;
+	height: 35px;
+	margin-bottom: 5px;
+}
+
+.getInputGradient(@colorA, @colorB, @colorC) {
+	width: 252px;
+	height: 25px;
+	border: 1px solid @colorA;
+	color: #FFF;
+	margin-bottom: 5px;
+	background-color: @colorA;
+	background: -moz-linear-gradient(center top, @colorB 0pt, @colorC 100%) repeat scroll 0 0 transparent;
+}
+
+/* Style */
+body {
+	background-color: @bgColor;
+	font: 16px/22px Helvetica, Arial, Verdana, sans-serif;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+   	height: 100%;
+   	overflow-x: hidden;
+}
+
+a {
+    color: @aColor;
+    outline: medium none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active, a:focus {
+    color: @aHoverColor; 
+}
+
+p {
+    color: @pColor;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 85%;
+    text-align: justify;
+}
+
+h2 {
+    .h();
+}
+
+h3 {
+	.h(@hColor, 120%, 8px);
+}
+
+h4 {
+	.h(@hColor, 100%, 8px);
+}
+
+header #topbar-wrapper {
+	width: 100%;
+	height: 40px;
+	background-color: #292929;
+}
+
+header #topbar {
+	width: @width;
+	height: 40px;
+	line-height: 40px;
+	margin: 0 auto;
+}
+
+header #topbar nav {
+	float: left;
+}
+
+header #topbar nav ul {
+	width: 470px;
+	margin: 0px;
+	padding: 0px;
+}
+
+header #topbar nav ul li {
+	.navUlLi
+}
+
+header #topbar nav ul li a {
+	.navUlLiA
+}
+
+header #topbar nav ul li a:hover, header ul li a.current {
+    background: none repeat scroll 0 0 @aColor;
+}
+
+header #wrapper {
+	width: @width;
+	margin: 0 auto;
+}
+
+header #wrapper nav ul {
+	width: 720px;
+	.resetMarginAndPadding;
+	position: relative;
+	z-index: 2;
+	margin-left: 35%;
+	margin-top: -70px;
+}
+
+header #wrapper nav ul li {
+    .navUlLi;
+}
+
+header #wrapper nav ul li a {
+    .navUlLiA;
+    margin-top: 5px;
+}
+
+header #wrapper nav ul li a:hover, header ul li a.current {
+    background: none repeat scroll 0 0 @blueColor;
+}
+
+header #logo {
+	width: 250px;
+	height: 90px;
+	background-image: url('../images/logo.png');
+	text-indent: -9999px;
+}
+
+#content {
+	width: 60%;
+	float: left;
+	.getMargin(6%, 3%, 0%, 10.2%);
+	min-height: 430px;
+}
+
+aside {
+	width: 23%;
+	float: left;
+	margin-top: 6%;
+}
+
+aside .social {
+	margin-left: 30%;
+}
+
+aside header {
+	text-align: center;
+}
+
+aside .transmission .text {
+	font-size: 75%;
+	text-align: center;
+}
+
+aside .transmission a {
+	text-decoration: none;
+}
+
+aside .transmission a:hover {
+	color: #045c98;
+}
+
+aside .transmission ul {
+    list-style: none outside none;
+    margin: 0px;
+    margin-left: 13%;
+    width: 230px;
+    padding: 0;
+    font-size: 75%;
+}
+
+aside .transmission ul li {
+    margin-bottom: 5px;
+}
+
+footer p {
+	background-color: #ebebe1;
+	border-top: 1px solid #c0c0b4;
+	border-bottom: 1px solid #c0c0b4;
+   	font-size: 70%;
+   	text-align: center;
+   	color: #7f7f7f;
+   	width: 100%;
+   	height: 45px;
+   	bottom: 0px;
+}
+
+footer a {
+	text-decoration: none;
+}
+
+footer a:hover {
+	color: #292929;
+}
+
+.line {
+	width: 245px;
+	height: 2px;
+	background-color: #F9F9F9;
+}
+
+.schedule1 {
+	padding-left: 155px;
+}
+
+.schedule2 {
+	padding-left: 98px;
+}
+
+.schedule3 {
+	padding-left: 118px;
+}
+
+.schedule4 {
+	padding-left: 156px;
+}
+
+#top-box .flag {
+	vertical-align: middle;
+}
+
+#top-box ul {
+	float: right;
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	font-size: 70%;
+	margin-top: 2px;
+}
+
+#top-box ul li {
+	display: inline;
+}
+
+#top-box ul li a {
+	color: #FFF;
+	text-decoration: none;
+	margin-right: 15px;
+}
+
+#top-box ul li a:hover {
+	color: #3cafd4;
+}
+
+#top-box-languages {
+	.getPorlet(80px, 30px, 920px);
+}
+
+#top-box-register {
+	.getPorlet(280px, auto, 865px);
+}
+
+#top-box-login {
+	.getPorlet(290px, auto, 900px);
+}
+
+#top-box-login a {
+	text-decoration: none;
+}
+
+#top-box-login a:hover {
+	color: #004a7d;
+}
+
+#top-box-profile {
+	.getPorlet(270px, auto, 900px);
+}
+
+#top-box-profile a {
+	text-decoration: none;
+	color: #333;
+}
+
+#top-box-profile a:hover {
+	text-decoration: none;
+	color: #006ec2;
+}
+
+.form-register fieldset {
+	border: 1px dotted #d1d1d1;
+	margin-top: 10px;
+	width: 91.5%;
+	font-size: 75%;
+	text-align: center;
+}
+
+.form-register .register-input {
+	.getInput;
+}
+
+.form-register .register-submit {
+	.getInputGradient(#CC2A2A, #CC2A2A, #b40f0f);
+}
+
+.form-login fieldset {
+	border: 1px dotted #d1d1d1;
+}
+
+.form-login .login-input {
+	.getInput;
+}
+
+.form-login .login-submit {
+	.getInputGradient(#1481cc, #045c98, #1481cc);
+}
+
+input:required:invalid, input:focus:invalid {
+ 	background-image: url('../images/invalid.png');
+  	background-position: right top;
+  	background-repeat: no-repeat;
+}
+
+input:required:valid {
+  	background-image: url('../images/valid.png');
+  	background-position: right top;
+  	background-repeat: no-repeat;
+}

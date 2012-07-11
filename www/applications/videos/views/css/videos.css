@@ -1,0 +1,8 @@
+.videos a {
+	color: #292929;
+	text-decoration: none;
+}
+
+.videos a:hover {
+	color: #CC2A2A;
+}

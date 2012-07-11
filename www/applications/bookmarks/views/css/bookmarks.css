@@ -1,0 +1,17 @@
+.bookmarks h2 a {
+	color: #292929;
+	text-decoration: none;
+}
+
+.bookmarks h2 a:hover {
+	color: #045c98;
+}
+
+.bookmarks a {
+	color: #CC2A2A;
+	text-decoration: none;
+}
+
+.bookmarks a:hover {
+	color: #045c98;
+}
